@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+    <style>
+        body{
+            padding-top: 15px;
+            font: normal 18pt arial;
+            text-align: center;
+        }
+        input{
+  
+            height: 15pt;
+            font-size: 14pt;
+            width: 100px;
+        }
+        #somar,#subtrair{
+            height: 20pt;
+        }
+        #res,#resultado,#produto{
+            padding-top: 12px;
+        }
+        div#resultado{
+            padding-top: 12px;
+        }
+    </style>
+</head>
+<body>
+   
+
+     <!-- Soma -->
+     <h1>Somando Valores</h1> 
+     <input type="number" name="txtn1" id="txtn1" onkeyup="somar()"
+     > +
+     <input type="number" name="txtn2" id="txtn2" onkeyup="somar()">
+     
+     <div id="res"></div>
+
+   <!-- Subtração -->
+   <h1>Subtraindo Valores</h1> 
+   <input type="number" name="sub1" id="sub1" onkeyup="subtrair()"
+   > -
+   <input type="number" name="sub2" id="sub2" onkeyup="subtrair()">
+   <div id="resultado"></div>
+
+   <!-- Multiplicação -->
+   <h1>Multiplicando Valores</h1> 
+   <input type="number" name="mult1" id="mult1" onkeyup="multiplicar()"
+   > *
+   <input type="number" name="mult2" id="mult2" onkeyup="multiplicar()">
+   
+   <div id="produto"></div>
+
+
+   <script>
+    function somar(){
+        var txtn1 = window.document.getElementById('txtn1')
+        var txtn2 = window.document.querySelector('input#txtn2')
+        var res = document.getElementById('res')
+        var n1 = Number(txtn1.value)
+        var n2 = Number(txtn2.value)
+        var s = n1 + n2
+        res.innerHTML = `<big>${s}</big>`
+    }
+    function subtrair(){
+        var sub1 = window.document.getElementById('sub1')
+        var sub2 = window.document.querySelector('input#sub2')
+        var total1 = document.getElementById('resultado')
+        var sn1 = Number(sub1.value)
+        var sn2 = Number(sub2.value)
+        var ss = sn1 - sn2
+        resultado.innerHTML = `<big>${ss}</big>`
+    }
+    function multiplicar(){
+        var fat1 = window.document.getElementById('mult1')
+        var fat2 = window.document.querySelector('input#mult2')
+        var total2 = document.getElementById('produto')
+        var fator1 = Number(mult1.value)
+        var fator2 = Number(mult2.value)
+        var produtoDoResultado = fator1 * fator2
+        produto.innerHTML = `<big>${produtoDoResultado}</big>`
+    }
+    function dividir(){
+        var divisor = window.document.getElementById('div1')
+        var dividendo = window.document.querySelector('input#div2')
+        var total3 = document.getElementById('quociente')
+        var resto1 = document.getElementById('resto')
+        var divisor1 = Number(div1.value)
+        var dividendo2 = Number(div2.value)
+        var quociente1 = divisor1 / dividendo2
+        var nadinha = Number(quociente1)
+        var restinho = divisor1 % dividendo2
+        quociente.innerHTML = `<big>${nadinha}</big>`
+        resto.innerHTML = `<big> O resto é ${restinho}</big>`
+    }   
+
+</script>
+   <!-- Divisão -->
+   <h1>Dividindo Valores</h1> 
+   <input type="number" name="div1" id="div1" onkeyup="dividir()"
+   > ÷
+   <input type="number" name="div2" id="div2" onkeyup="dividir()">
+   <div id="quociente"> </div><br>
+   <div id="resto"> </div>
+</body>
+</html>
