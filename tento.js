@@ -98,6 +98,6 @@ switch (month) {
         break;
 }
 
-var tot = `   <h1>${diaEscrito} ${day} de ${month} de ${year}</h1>`;
+var tot = `   <h1><span> ${day} / ${month} / ${year}</h1></span>`;
 console.log(tot)
 window.document.getElementById('p2').innerHTML = tot
