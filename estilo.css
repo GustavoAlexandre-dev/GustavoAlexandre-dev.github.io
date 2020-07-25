@@ -6,6 +6,7 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     width: 100%;
+    text-align: center;
 }
 
 header {
@@ -21,7 +22,7 @@ section {
     padding: 3%;
     width: 500px;
     height: 350px;
-
+text-align: center;
     margin: auto;
     /* Sombra 'box-shadow: desl.x[px] desl.y[px] espalhamento(difusão)[px] cor;' */
     box-shadow: 5px 5px 7px #161616;
@@ -30,12 +31,13 @@ section {
 #msg{
     padding-bottom: 5%;
     font-size: 140%;
+    text-align: center;
 }
 #imagem{
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    
+    text-align: center;
 }
 div{
     text-align: center;
